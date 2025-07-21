@@ -1,3 +1,48 @@
+function gradient(text, startColor, endColor)
+    local result = ""
+    local length = #text
+
+    for i = 1, length do
+        local t = (i - 1) / math.max(length - 1, 1)
+        local r = math.floor((startColor.R + (endColor.R - startColor.R) * t) * 255)
+        local g = math.floor((startColor.G + (endColor.G - startColor.G) * t) * 255)
+        local b = math.floor((startColor.B + (endColor.B - startColor.B) * t) * 255)
+
+        local char = text:sub(i, i)
+        result = result .. "<font color=\"rgb(" .. r ..", " .. g .. ", " .. b .. ")\">" .. char .. "</font>"
+    end
+
+    return result
+end
+
+local NotificationLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/DemogorgonItsMe/DemoNotifications/refs/heads/main/V2/source.lua"))()
+NotificationLib:SetSettings({
+    position = "BottomRight", -- "BottomRight" or "BottomCenter"
+    maxNotifications = 5,     -- Max notifications shown simultaneously
+    duration = 4,            -- Default duration (seconds)
+    spacing = 10,            -- Space between notifications (px)
+    fadeTime = 0.3,          -- Animation duration (seconds)
+    slideDistance = 20       -- Slide animation distance (px)
+})
+NotificationLib:SetTheme({
+    -- Colors
+    primaryColor = Color3.fromRGB(45, 45, 45),
+    successColor = Color3.fromRGB(50, 180, 100),
+    errorColor = Color3.fromRGB(220, 80, 80),
+    warningColor = Color3.fromRGB(240, 180, 50),
+    textColor = Color3.fromRGB(255, 255, 255),
+    showStroke = false,
+    useBackgroundColor = false,
+    backgroundTransparency = 0.1,
+    
+    -- Appearance
+    cornerRadius = UDim.new(0, 5),
+    font = Enum.Font.GothamSemibold, -- text font
+    background = "rbxassetid://18610728562", -- Background Image
+    closeIcon = "rbxassetid://6031094677",
+    mobileScale = 0.8
+})
+
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -577,7 +622,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", "CHED测试中心", 12), {
+			AddThemeObject(SetProps(MakeElement("Label", "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ", 12), {
 				Size = UDim2.new(1, -60, 0, 12),
 				Position = UDim2.new(0, 50, 1, -25),
 				Visible = not WindowConfig.HidePremium
@@ -649,8 +694,8 @@ function OrionLib:MakeWindow(WindowConfig)
 		MainWindow.Visible = false
 		UIHidden = true
 		OrionLib:MakeNotification({
-			Name = "提示: ",
-			Content = "已关闭OrionLib窗口",
+			Name = "已销毁 OrionLib窗口!",
+			Content = "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
@@ -1717,6 +1762,12 @@ function OrionLib:Destroy()
 end
 
 function OrionLib:ToggleUi()
+    NotificationLib:Notify({
+    Title = "已关闭主要窗口![并非销毁]",
+    Message = "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ",
+    Type = "info", 
+    Duration = 10
+})
 	Orion.Enabled = not Orion.Enabled
 end
 
