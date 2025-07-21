@@ -693,11 +693,13 @@ function OrionLib:MakeWindow(WindowConfig)
 	AddConnection(CloseBtn.MouseButton1Up, function()
 		MainWindow.Visible = false
 		UIHidden = true
-		OrionLib:MakeNotification({
-			Name = "已销毁 OrionLib窗口!",
-			Content = "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ",
-			Time = 5
-		})
+	    NotificationLib:Notify({
+    Title = "已销毁OrionLib接口!",
+    Message = "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ",
+    Type = "info", 
+    Duration = 10
+})
+
 		WindowConfig.CloseCallback()
 	end)
 
@@ -1762,12 +1764,6 @@ function OrionLib:Destroy()
 end
 
 function OrionLib:ToggleUi()
-    NotificationLib:Notify({
-    Title = "已关闭主要窗口![并非销毁]",
-    Message = "冻梨中心" .. gradient("V2", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " ",
-    Type = "info", 
-    Duration = 10
-})
 	Orion.Enabled = not Orion.Enabled
 end
 
