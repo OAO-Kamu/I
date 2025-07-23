@@ -35,8 +35,9 @@ NotificationLib:SetTheme({
 })
 getgenv().Games = {
     [9872472334] = "https://raw.github.com/OAO-Kamu/Roblox-Kamu-Evade-CHANGED-Script/refs/heads/main/Evade.Luau",--EVADE PC
-    [18687417158] = "https://raw.github.com/OAO-Kamu/Main/refs/heads/main/Forsaken.Main.Main.raw",--Forsaken Mobile
-    [16991287194] = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/S.E.W.H..Luau",--Something Evil Will Happen Mobile
+    [18687417158] = "https://raw.github.com/OAO-Kamu/Main/refs/heads/main/Forsaken.Main.Main.raw",--Forsaken Mobile+PC
+    [16991287194] = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/S.E.W.H..Luau",--Something Evil Will Happen 
+    [13772394625] = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/BladeBall.Luau",--Blade Ball Mobile+PC
 }
 
 local id = game.PlaceId
@@ -51,7 +52,7 @@ if url then
 
     loadstring(game:HttpGet(url))()
 end
-local ulr = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/CHANGED%20HUB.Luau"
+local ulr = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/Frozen-pear-HUB.Luau"
 if not url then
     NotificationLib:Notify({
     Title = "没有找到支持的服务器已自动加载通用脚本!",
