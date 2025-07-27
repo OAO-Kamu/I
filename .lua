@@ -188,10 +188,10 @@ NotificationLib:SetTheme({
     mobileScale = 0.8
 })
 getgenv().Games = {
-    [9872472334] = "https://raw.github.com/OAO-Kamu/Roblox-Kamu-Evade-CHANGED-Script/refs/heads/main/Evade.Luau",--EVADE PC
+    [9872472334] = "https://raw.github.com/OAO-Kamu/Frozen-sheep/refs/heads/main/CEvade.luau",--EVADE PC-Mobile
     [18687417158] = "https://raw.github.com/OAO-Kamu/Main/refs/heads/main/Forsaken.Main.Main.raw",--Forsaken Mobile+PC
     [16991287194] = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/S.E.W.H..Luau",--Something Evil Will Happen 
-    [13772394625] = "https://raw.github.com/OAO-Kamu/I/refs/heads/main/BladeBall.Luau",--Blade Ball Mobile+PC
+    [13772394625] = "https://raw.github.com/OAO-Kamu/Frozen-sheep/refs/heads/main/Blade.Balls.luau",--Blade Ball Mobile+PC
 }
 
 local id = game.PlaceId
