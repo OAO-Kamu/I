@@ -26,7 +26,7 @@ NotificationLib:SetTheme({
     mobileScale = 0.8
 })
 getgenv().Games = {
-    [18687417158] = "https://raw.github.com/OAO-Kamu/I/main/Fask.raw",--Forsaken
+    [18687417158] = "https://raw.github.com/OAO-Kamu/I/main/fask.raw",--Forsaken
 }
 
 local id = game.PlaceId
