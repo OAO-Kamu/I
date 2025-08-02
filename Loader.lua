@@ -1,3 +1,34 @@
+local Kamu = "纸道了"
+if Kamu then
+local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Dear-ReGui/refs/heads/main/ReGui.lua'))();
+local PrefabsId = "rbxassetid://" .. ReGui.PrefabsId;
+ReGui:Init({
+	Prefabs = cloneref(game:GetService('InsertService'):LoadLocalAsset(PrefabsId)),
+});
+local function Notify(Title, Text, Duration)
+	game:GetService('StarterGui'):SetCore("SendNotification", {
+		Title = Title,
+		Text = Text,
+		Duration = Duration,
+	})
+end
+Notify("请验证!", game.Players.LocalPlayer.Name, 7);
+local Window = ReGui:PopupModal({
+	Title = "冻羊验证GUI",
+	NoClose = true,
+})
+Window:Label({
+	Text = "等待 5 秒后点击“纸道了”就可进行下一步操作\n 此验证作者: 预制菜"
+});
+wait(5)
+Window:Button({
+	Text = Kamu,
+	Callback = function()
+		Window:ClosePopup();
+	end
+});
+end
+wait(3.5)
 local NotificationLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/DemogorgonItsMe/DemoNotifications/refs/heads/main/V2/source.lua"))()
 NotificationLib:SetSettings({
     position = "BottomCenter", -- "BottomRight" or "BottomCenter"
