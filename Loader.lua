@@ -31,8 +31,9 @@ end
 wait(6)
 
 getgenv().Games = {
-    [18687417158] = "https://raw.github.com/OAO-Kamu/I/main/fask.raw",--Forsaken
-    [5670218884] = "https://raw.github.com/OAO-Kamu/I/main/IA.luau"
+    [18687417158] = "https://raw.github.com/OAO-Kamu/I/main/Forasken.lua",--Forsaken
+    [5670218884] = "https://raw.github.com/OAO-Kamu/I/main/IA.luau" --Item Asylum
+    [13772394625] = "https://raw.github.com/OAO-Kamu/I/main/BladeBalls.lua" --Blade Ball
 }
 
 local id = game.PlaceId
