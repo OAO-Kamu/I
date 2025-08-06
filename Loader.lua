@@ -1,6 +1,6 @@
 local Kamu = "这是一个加载器!"
 if Kamu then
-local ReGui = loadstring(game:HttpGet('https://raw.github.com/depthso/Dear-ReGui/main/ReGui.lua'))();
+local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Dear-ReGui/refs/heads/main/ReGui.lua'))();
 local LOL = "https://raw.github.com/"
 local PrefabsId = "rbxassetid://" .. ReGui.PrefabsId;
 ReGui:Init({
