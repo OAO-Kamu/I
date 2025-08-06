@@ -1,39 +1,30 @@
 local Kamu = "这是一个加载器!"
 if Kamu then
 local ReGui = loadstring(game:HttpGet('https://raw.github.com/depthso/Dear-ReGui/main/ReGui.lua'))();
+local LOL = "https://raw.github.com/"
 local PrefabsId = "rbxassetid://" .. ReGui.PrefabsId;
 ReGui:Init({
 	Prefabs = cloneref(game:GetService('InsertService'):LoadLocalAsset(PrefabsId)),
 });
-local function Notify(Title, Text, Duration)
-	game:GetService('StarterGui'):SetCore("SendNotification", {
+local function Notify(Title, Text, Duration)	game:GetService('StarterGui'):SetCore("SendNotification", {
 		Title = Title,
 		Text = Text,
 		Duration = Duration,
-	})
-end
+	})end
 Notify("请验证!", game.Players.LocalPlayer.Name, 7);
 local Window = ReGui:PopupModal({
 	Title = "冻羊验证GUI",
-	NoClose = true,
-})
-Window:Label({
-	Text = "等待 5 秒后点击“纸道了”就可进行下一步操作\n 此验证作者: 预制菜"
-});
+	NoClose = true,})
+local Kamu = "OAO-Kamu/I/main/"
+Window:Label({Text = "等待 5 秒后点击“纸道了”就可进行下一步操作\n 此验证作者: 预制菜"});
 wait(5)
-Window:Button({
-	Text = "下一步",
-	Callback = function()
-		Window:ClosePopup();
-	end
-});
-end
+Window:Button({Text = "下一步",Callback = function()Window:ClosePopup();end});end
 wait(6)
 
 getgenv().Games = {
-    [18687417158] = "https://raw.github.com/OAO-Kamu/I/main/Forasken.lua",--Forsaken
-    [5670218884] = "https://raw.github.com/OAO-Kamu/I/main/IA.luau" --Item Asylum
-    [13772394625] = "https://raw.github.com/OAO-Kamu/I/main/BladeBalls.lua" --Blade Ball
+    [18687417158] = LOL .. "" .. Kamu .. "Forasken.lua",--Forsaken
+    [5670218884] = LOL .. "" .. Kamu .. "IA.luau" --Item Asylum
+    [13772394625] = LOL .. "" .. Kamu .. "BladeBalls.lua" --Blade Ball
 }
 
 local id = game.PlaceId
