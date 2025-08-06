@@ -22,10 +22,10 @@ Window:Button({Text = "下一步",Callback = function()Window:ClosePopup();end})
 wait(6)
 
 getgenv().Games = {
-    [18687417158] = LOL .. "" .. Kamu .. "Forasken.lua",--Forsaken
-    [5670218884] = LOL .. "" .. Kamu .. "IA.luau" --Item Asylum
-    [13772394625] = LOL .. "" .. Kamu .. "BladeBalls.lua" --Blade Ball
-}
+    [18687417158] = LOL .. "" .. Kamu .. "Forasken.lua", --Forsaken
+    [5670218884] = LOL .. "" .. Kamu .. "IA.luau", --Item Asylum
+    [13772394625] = LOL .. "" .. Kamu .. "BladeBalls.lua", --Blade Ball
+    }
 
 local id = game.PlaceId
 local url = getgenv().Games[id]
@@ -36,6 +36,3 @@ end
 if not url then
 game.Players.LocalPlayer:Kick("不支持当前服务器!\n仅支持: 被遗弃 物品避难所 刀刃球!!!")
 end
-
-
-
