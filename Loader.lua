@@ -43,7 +43,7 @@ if url then
 end
 
 if not url then
-game.Players.LocalPlayer:Kick("不支持当前服务器!\n仅支持: 被遗弃 物品避难所!!!")
+game.Players.LocalPlayer:Kick("不支持当前服务器!\n仅支持: 被遗弃 物品避难所 刀刃球!!!")
 end
 
 
