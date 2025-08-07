@@ -1,18 +1,7 @@
-local GalaxyKamu = [[
-local gradient = Instance.new("UIGradient")
-gradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(112, 193, 209)),  -- 冰川湖泊
-    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(130, 170, 141)),  -- 晨雾森林
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(190, 144, 120))   -- 陶土棕
-})
-gradient.Rotation = 90
-gradient.Parent = frame
-]]
-
 Library = {}
 SaveTheme = {}
 local themes = {
-	index = {'Amethyst', 'GalaxyDark', 'LightPink'},
+	index = {'Amethyst', 'LightPink'},
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(122, 193, 209),
@@ -89,83 +78,6 @@ local themes = {
 			}
 		}
 	},
-	Galaxy = {
-		['Shadow'] = Color3.fromRGB(15, 15, 15),
-		['Background'] = GalaxyKamu,
-		['Page'] = GalaxyKamu,
-		['Main'] = GalaxyKamu,
-		['Text & Icon'] = Color3.fromRGB(183, 82, 242),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(70, 130, 180),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 20),
-					['Search'] = Color3.fromRGB(30, 30, 30),
-					['Item Background'] = Color3.fromRGB(30, 30, 30),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['Slider Bar'] = Color3.fromRGB(40, 40, 40),
-				['Slider Bar Value'] = Color3.fromRGB(70, 130, 180),
-				['Circle Value'] = Color3.fromRGB(255, 255, 255)
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))},
-				['Background Code'] = Color3.fromRGB(35, 35, 35),
-				['Background Code Value'] = Color3.fromRGB(28, 28, 28),
-				['ScrollingFrame Code'] = Color3.fromRGB(150, 150, 150)
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Click'] = Color3.fromRGB(230, 230, 230)
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(70, 130, 180),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 20),
-					['UIStroke'] = Color3.fromRGB(230, 230, 230),
-				}
-			}
-		}
-	},
-}
 LightPink = {
 		['Shadow'] = Color3.fromRGB(15, 15, 15),
 		['Background'] = Color3.fromRGB(255, 255, 255),
