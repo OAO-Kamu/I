@@ -4520,8 +4520,8 @@ function Library:Window(p)
 			if not firsttime then
 				firsttime = true
 				Tabs:Notify({
-					Title = ' <font color='#FF0000'>CHANGED HUB</font> 提示:',
-					Desc = '按下: <font color="#FF77A5" size="14">('..tostring(Keybind):gsub("Enum.KeyCode.", "")..')</font> 键或者点击按钮可重新打开UI窗口!',
+					Title = '隐藏了 UI',
+					Desc = 'Press the <font color="#FF77A5" size="14">('..tostring(Keybind):gsub("Enum.KeyCode.", "")..')</font> button to hide and show the UI',
 					Time = 10
 				})
 			end
@@ -4622,16 +4622,16 @@ function Library:Window(p)
 
 		Close_1.MouseButton1Click:Connect(function()
 			Tabs:Dialog({
-				Title = "你真的要关闭UI吗?~",
+				Title = "你要销毁这个UI吗?",
 				Button1 = {
-					Title = '嗯对的',
+					Title = '嗯对',
 					Color = Color3.fromRGB(0, 188, 0),
 					Callback = function()
 						ScreenGui:Destroy()
 					end,
 				},
 				Button2 = {
-					Title = '按错了',
+					Title = '算了',
 					Color = Color3.fromRGB(226, 39, 6),
 				}
 			})
