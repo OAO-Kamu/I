@@ -1,4 +1,3 @@
-
 local L = loadstring or load
 local GitHub = "https://raw.github.com/OAO-Kamu/"
 local ID = GitHub .. "I/main/"
