@@ -33,7 +33,7 @@ Window:Dialog({
             Callback = function()
                 MacLib:Destroy()
             	getgenv().Games = {
-                  [18687417158] = ID .. "A.Luau",--Regret Elevator V1.4
+                  [18687417158] = ID .. "A.Luau",--Forsaken
                 }
                 local id = game.PlaceId
                 local url = getgenv().Games[id]
@@ -41,7 +41,7 @@ Window:Dialog({
                    Compkiller:Loader("rbxassetid://120245531583106" , 5.698745).yield();
                    L(game:HttpGet(url))()
                 end
-                local ulr = ID .. ""
+                local ulr = ID .. "A.Lua"
                 if not url then
                     Notifier.new({
 			            Title = "你这服务器是啥呀, 脚本不支持这个服务器",
