@@ -1,5 +1,0 @@
-local L = loadstring or load
-local Compkiller = L(game:HttpGet("https://raw.githubusercontent.com/4lpaca-pin/CompKiller/refs/heads/main/src/source.luau"))()
-local Notifier = Compkiller.newNotify()
-Compkiller:Loader("rbxassetid://120245531583106" , 3.698745).yield()
-L(game:HttpGet("https://raw.github.com/OAO-Kamu/I/main/A.Luau"))()
