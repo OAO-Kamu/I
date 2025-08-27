@@ -7,7 +7,7 @@ u,Vi={},function(Bf,Cv,yp)
     return u[Bf]
 end
 DE={[55464]=function()
-    AE[1]=Nu[AE[1]]
+    AE[1]=Nu AE[1]
     RK=u[184581700/20450]or Vi(26983+-17957,29051+26911,-6511- -25365)
 end,[7682]=function()
     vA=(select);
