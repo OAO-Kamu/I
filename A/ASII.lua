@@ -22,6 +22,29 @@ local Window = splib:MakeWindow({
  CloseCallback = true
 })
 
+Tab = Window:MakeTab({
+  IsMobile = true,
+  Name = "本地信息",
+  Icon = "rbxassetid://4483345998"
+})
+
+Tab:AddLabel("您的用户名: "..game.Players.LocalPlayer.Name)
+Tab:AddLabel("您的名称: "..game.Players.LocalPlayer.DisplayName)
+Tab:AddLabel("您的语言: "..game.Players.LocalPlayer.LocaleId)
+Tab:AddLabel("您的国家: "..game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(game.Players.LocalPlayer))
+Tab:AddLabel("您的账户年龄(天): "..game.Players.LocalPlayer.AccountAge)
+Tab:AddLabel("您的账户年龄(年): "..math.floor(game.Players.LocalPlayer.AccountAge/365*100)/(100))
+Tab:AddLabel("您使用的注入器："..identifyexecutor())
+Tab:AddLabel("您当前的服务器ID: "..game.PlaceId)
+Tab:AddSection({
+  Name = "======================================================================"  
+})
+Tab:AddLabel("作者Roblox用户名: plm398_qe4")
+Tab:AddLabel("作者Roblox大号: plm398")
+Tab:AddLabel("脚本由: Q3E4 yzc 制作")
+Tab:AddLabel("半开源 半缝合")
+Tab:AddLabel("加入BH团队: KamuUwU(这是微信号)")
+
 MainTab = Window:MakeTab({
   IsMobile = true,
   Name = "主要",
@@ -274,4 +297,32 @@ ESPTab:AddToggle({
     end)
     end
 })
+StateTab = Window:MakeTab({
+  IsMobile = true,
+  Name = "服务状态",
+  Icon = "rbxassetid://4483345998"
+})
+StateTab:AddSection({
+  Name = "CHANGED 脚本工作状态: "
+})
+StateTab:AddSection({
+  Name = "🔴 | 已下线: 3/10"
+})
+StateTab:AddSection({
+  Name = "🟡 | 制作中: 1/10"
+})
+StateTab:AddSection({
+  Name = "🟢 | 运行中: 6/10"
+})
+StateTab:AddLabel("🟢WORK |  被遗弃")
+StateTab:AddLabel("🟢WORK |  暴力区 (当前)")
+StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
+StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
+StateTab:AddLabel("🟢WORK |  通用脚本 ")
+StateTab:AddLabel("🟢WORK |  后悔电梯")
+StateTab:AddLabel("🟡MAKEING |  The Rake")
+StateTab:AddLabel("🔴TAPEOUT |  刀刃球")
+StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss")
+StateTab:AddLabel("🔴TAPEOUT |  MM2")
+
 Hi()
