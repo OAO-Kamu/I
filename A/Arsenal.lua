@@ -682,17 +682,17 @@ StateTab:AddSection({
   Name = "🔴 | 已下线: 3/10"
 })
 StateTab:AddSection({
-  Name = "🟡 | 制作中: 2/10"
+  Name = "🟡 | 制作中: 1/10"
 })
 StateTab:AddSection({
-  Name = "🟢 | 运行中: 5/10"
+  Name = "🟢 | 运行中: 6/10"
 })
-StateTab:AddLabel("🟢WORK |  被遗弃 <==当前使用")
+StateTab:AddLabel("🟢WORK |  被遗弃")
 StateTab:AddLabel("🟢WORK |  暴力区")
-StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
-StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
+StateTab:AddLabel("🟢WORK |  兵工厂(汉化)[当前]")
+StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X API")
 StateTab:AddLabel("🟢WORK |  通用脚本 ")
-StateTab:AddLabel("🟡MAKEING |  后悔电梯")
+StateTab:AddLabel("🟢WORK |  后悔电梯")
 StateTab:AddLabel("🟡MAKEING |  The Rake")
 StateTab:AddLabel("🔴TAPEOUT |  刀刃球")
 StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss")
