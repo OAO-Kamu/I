@@ -79,7 +79,9 @@ Tab:AddButton({
     Name = "🟢 | WW1",
     Desc = "CHANGED 汉化开源脚本: 蒂固根深 WW1",
     Callback = function()
-    
+    local L = loadstring or load
+    local ID = "https://raw.github.com/OAO-Kamu/I/main/A/WW1.Lua"
+    L(game:HttpGet(ID))()
     end
 })
 
