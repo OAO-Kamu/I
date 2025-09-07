@@ -1,4 +1,4 @@
---[[This script was generated using the MoonVeil Obfuscator v1.3.3 ］］
+--[[This script was generated using the MoonVeil Obfuscator v4.0.0 ］］
 local NH,xH,ul,NI,Kk,as=bit32.bxor,getmetatable,pairs,type;
 local XC,H,aL,Vi,Xx,mn,RK,Wa,Nu,Hy,Vo,ng,bs,AE,DE,bg,Kw,Iw,en,hq,Uc,u,ii,Dx,vA,a,rG
 AE={}
