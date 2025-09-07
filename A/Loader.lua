@@ -1,7 +1,13 @@
 local L = loadstring or load
 local Lib = "https://raw.github.com/OAO-Kamu/UI-Library-Interface/main/SP%20LibraryMain.lua"
 local splib = L(game:HttpGet(Lib))()
-
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodLetters/Ash-Libs/refs/heads/main/source.lua"))()
+local function Noti()
+        GUI:CreateNotify({
+         title = "已开始加载脚本!请等待脚本覆盖~~",
+         description = "❤️ 你好用户~"
+     })
+ end
 local Window = splib:MakeWindow({
  Name = "CHANGED HUB  | Loader",
  HidePremium = false,
@@ -29,8 +35,9 @@ MainTab:AddButton({
     Desc = "CHANGED 不开源脚本: 被遗弃",
     Callback = function()
         local L = loadstring or load
-        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/fask.lua"
+        local ID = "https://raw.github.com/OAO-Kamu/Forsaken/main/A1.......Luau"
         L(game:HttpGet(ID))()
+        Noti()
     end
 })
 MainTab:AddButton({
@@ -40,6 +47,7 @@ MainTab:AddButton({
         local L = loadstring or load
         local ID = "https://raw.github.com/OAO-Kamu/I/main/A/ASII.lua"
         L(game:HttpGet(ID))()
+        Noti()
     end
 })
 MainTab:AddButton({
@@ -49,6 +57,7 @@ MainTab:AddButton({
         local L = loadstring or load
         local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Piggy.lua"
         L(game:HttpGet(ID))()
+        Noti()
     end
 })
 
@@ -64,6 +73,7 @@ Tab:AddButton({
         local L = loadstring or load
         local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Arsenal.lua"
         L(game:HttpGet(ID))()
+        Noti()
     end
 })
 Tab:AddButton({
@@ -73,6 +83,7 @@ Tab:AddButton({
         local L = loadstring or load
         local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Broken%20Bone.lua"
         L(game:HttpGet(ID))()
+        Noti()
     end
 })
 Tab:AddButton({
@@ -82,6 +93,7 @@ Tab:AddButton({
     local L = loadstring or load
     local ID = "https://raw.github.com/OAO-Kamu/I/main/A/WW1.Lua"
     L(game:HttpGet(ID))()
+    Noti()
     end
 })
 
