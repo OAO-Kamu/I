@@ -1,3 +1,518 @@
---[[This script is mixed with CHANGED Obfuscator V0.6.4]]
---[[Bro 又要开始制作 skid 脚本了😂😂😂😂😂😂]]
-local _={}for O=1,0x0 do _[O]=0 end;local function X(O,A)return bit32.bxor(O,A)end;local function D(O)local A=""for U=1,#O,2 do A=A..string.char(tonumber(string.sub(O,U,U+1),16))end;return A end;local function R(O)local A=loadstring or load;return A(O)end;local function P(O,A)return game:HttpGet(O,A)end;local function J(O)local A=""for U=1,#O do A=A..string.char(O[U])end;return A end;local U=R;local G=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,85,73,45,76,105,98,114,97,114,121,45,73,110,116,101,114,102,97,99,101,47,109,97,105,110,47,83,80,37,50,48,76,105,98,114,97,114,121,77,97,105,110,46,108,117,97});local Y=U(P(G))();local K=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,66,108,111,111,100,76,101,116,116,101,114,115,47,65,115,104,45,76,105,98,115,47,114,101,102,115,47,104,101,97,100,115,47,109,97,105,110,47,115,111,117,114,99,101,46,108,117,97});local Z=U(P(K))();local function V()Z:CreateNotify({title=D("e5b7b2e5bc80e5a78be58aa0e8bdbde8849ae69cac21e8afb7e7ad89e5be85e8849ae69cac")..D("e8a686e79b96").."~~",description=D("e294a5")..D("e4bda0e5a5bde794a8e688b7")})end;local function Q(O,A)return O:MakeWindow(A)end;local W=Q(Y,{Name=D("4348414e47454420485542207c204c6f61646572"),HidePremium=false,SaveConfig=false,Setting=true,ToggleIcon=D("726278617373657469643a2f2f3832373935333237313639373832"),ConfigFolder="",CloseCallback=true});local function F(O,A)return O:MakeTab(A)end;local M=F(W,{IsMobile=true,Name=D("e4b8bbe6b8b8e6888f"),Icon=D("726278617373657469643a2f2f34343833333435393938")});local function B(O,A,U)return O:AddButton(A)end;B(M,{Name=D("f09f9fa8207c20")..D("e8a2abe98197e5bc83"),Desc=D("4348414e47454420")..D("e4b88de5bc80e6ba90e8849ae69cac3a20")..D("e8a2abe98197e5bc83"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,70,111,114,115,97,107,101,110,47,109,97,105,110,47,65,49,46,46,46,46,46,46,76,117,97,117});O(P(A))()V()end});B(M,{Name=D("f09f9fa8207c20")..D("e69ab4e58a9be58cba"),Desc=D("4348414e47454420")..D("e5bc80e6ba90e8849ae69cac3a20")..D("e69ab4e58a9be58cba"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,73,47,109,97,105,110,47,65,47,65,83,73,73,46,108,117,97});O(P(A))()V()end});B(M,{Name=D("f09f9fa8207c205069676779"),Desc=D("4348414e47454420")..D("e4b88de5bc80e6ba90e8849ae69cac3a205069676779"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,73,47,109,97,105,110,47,65,47,80,105,103,103,121,46,108,117,97});O(P(A))()V()end});local T=F(W,{IsMobile=true,Name=D("e6b189e58c96e6b8b8e6888f"),Icon=D("726278617373657469643a2f2f34343833333435393938")});B(T,{Name=D("f09f9fa8207c20")..D("e585b5e5b7a5e58e82"),Desc=D("4348414e47454420")..D("e6b189e58c96e5bc80e6ba90e8849ae69cac3a20")..D("e585b5e5b7a5e58e82"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,73,47,109,97,105,110,47,65,47,65,114,115,101,110,97,108,46,108,117,97});O(P(A))()V()end});B(T,{Name=D("f09f9fa8207c20")..D("e69194e696ade9aaa8e5a4b4"),Desc=D("4348414e47454420")..D("e6b189e58c96e5bc80e6ba90e8849ae69cac3a20")..D("e69194e696ade9aaa8e5a4b4"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,73,47,109,97,105,110,47,65,47,66,114,111,107,101,110,37,50,48,66,111,110,101,46,108,117,97});O(P(A))()V()end});B(T,{Name=D("f09f9fa8207c20575731"),Desc=D("4348414e47454420")..D("e6b189e58c96e5bc80e6ba90e8849ae69cac3a20")..D("e894a2e59bbae6a0b9e6b7b120575731"),Callback=function()local O=R;local A=J({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,46,99,111,109,47,79,65,79,45,75,97,109,117,47,73,47,109,97,105,110,47,65,47,87,87,49,46,76,117,97});O(P(A))()V()end});local S=F(W,{IsMobile=true,Name=D("e8849ae69cace8afa6e7bb86e78ab6e68081"),Icon=D("726278617373657469643a2f2f34343833333435393938")});local function C(O,A)return O:AddSection(A)end;C(S,{Name=D("4348414e47454420")..D("e8849ae69cace5b7a5e4bd9ce78ab6e680813a20")});C(S,{Name=D("f09f94b4207c20")..D("e5b7b2e4b88be7babf3a20332f3133")});C(S,{Name=D("f09f9fa1207c20")..D("e588b6e4bd9ce4b8ad3a20322f3133")});C(S,{Name=D("f09f9fa2207c20")..D("e8bf90e8a18ce4b8ad3a20382f3133")});local function L(O,A)return O:AddLabel(A)end;L(S,D("f09f9fa2574f524b207c20")..D("e8a2abe98197e5bc83"));L(S,D("f09f9fa2574f524b207c205069676779"));L(S,D("f09f9fa2574f524b207c204c6f61646572"));L(S,D("f09f9fa2574f524b207c20")..D("e5b89de59bbae6a0b9e6b7b120575731"));L(S,D("f09f9fa2574f524b207c20584f52204f6266"));L(S,D("f09f9fa2574f524b207c20")..D("e69ab4e58a9be58cba"));L(S,D("f09f9fa2574f524b207c20")..D("e585b5e5b7a5e58e82"));L(S,D("f09f9fa2574f524b207c20474c2d4c696e6b203c3d3d474c2d5820485542")..D("e79a84415049"));L(S,D("f09f9fa2574f524b207c20")..D("e9809ae794a8e8849ae69cac20"));L(S,D("f09f9fa14d414b45494e47207c20")..D("e5908ee68294e794b5e6a2af"));L(S,D("f09f9fa14d414b45494e47207c205468652052616b65"));L(S,D("f09f94b4544150454f5554207c20")..D("e58880e58991e79083"));L(S,D("f09f94b4544150454f5554207c20496e746f20546865204162797373"));L(S,D("f09f94b4544150454f5554207c204d4d32"))
+--[[Bro 快点制作 skid 脚本 我不混淆了😘]]
+
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "EnhancedProfileCard"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0.86, 0, 0.9, 0)
+mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 45)
+mainFrame.BackgroundTransparency = 0.15
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 16)
+corner.Parent = mainFrame
+
+local backgroundImage = Instance.new("ImageLabel")
+backgroundImage.Name = "Background"
+backgroundImage.Size = UDim2.new(1, 0, 1, 0)
+backgroundImage.Image = "rbxassetid://7071423635"
+backgroundImage.ImageTransparency = 0.6
+backgroundImage.ScaleType = Enum.ScaleType.Crop
+backgroundImage.BackgroundTransparency = 1
+backgroundImage.Parent = mainFrame
+
+local header = Instance.new("Frame")
+header.Name = "Header"
+header.Size = UDim2.new(1, 0, 0, 50)
+header.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
+header.BackgroundTransparency = 0.2
+header.BorderSizePixel = 0
+header.Parent = mainFrame
+
+local headerCorner = Instance.new("UICorner")
+headerCorner.CornerRadius = UDim.new(0, 16)
+headerCorner.Parent = header
+
+local headerDecoration = Instance.new("Frame")
+headerDecoration.Name = "HeaderDecoration"
+headerDecoration.Size = UDim2.new(1, 0, 0, 4)
+headerDecoration.Position = UDim2.new(0, 0, 1, -4)
+headerDecoration.BackgroundColor3 = Color3.fromRGB(100, 70, 200)
+headerDecoration.BorderSizePixel = 0
+headerDecoration.Parent = header
+
+local headerCorner2 = Instance.new("UICorner")
+headerCorner2.CornerRadius = UDim.new(0, 4)
+headerCorner2.Parent = headerDecoration
+
+local title = Instance.new("TextLabel")
+title.Name = "Title"
+title.Size = UDim2.new(1, 0, 1, 0)
+title.BackgroundTransparency = 1
+title.Text = "CHANGED HUB | 公告"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 22
+title.Parent = header
+
+local content = Instance.new("Frame")
+content.Name = "Content"
+content.Size = UDim2.new(1, 0, 1, -50)
+content.Position = UDim2.new(0, 0, 0, 50)
+content.BackgroundTransparency = 1
+content.Parent = mainFrame
+
+local leftPanel = Instance.new("Frame")
+leftPanel.Name = "LeftPanel"
+leftPanel.Size = UDim2.new(0.4, 0, 1, 0)
+leftPanel.BackgroundTransparency = 1
+leftPanel.Parent = content
+
+local avatarContainer = Instance.new("Frame")
+avatarContainer.Name = "AvatarContainer"
+avatarContainer.Size = UDim2.new(1, -40, 0, 173) 
+avatarContainer.Position = UDim2.new(0, 20, 0, 20)
+avatarContainer.BackgroundTransparency = 1
+avatarContainer.Parent = leftPanel
+
+local avatarImage = Instance.new("ImageLabel")
+avatarImage.Name = "Avatar"
+avatarImage.Size = UDim2.new(1, 0, 1, 0)
+avatarImage.BackgroundTransparency = 1
+avatarImage.Parent = avatarContainer
+
+local userId = player.UserId
+local avatarUrl = "https://www.roblox.com/headshot-thumbnail/image?userId=".. userId .."&width=420&height=420&format=png"
+avatarImage.Image = avatarUrl
+
+local avatarCorner = Instance.new("UICorner")
+avatarCorner.CornerRadius = UDim.new(0, 16)
+avatarCorner.Parent = avatarImage
+
+local avatarStroke = Instance.new("UIStroke")
+avatarStroke.Color = Color3.fromRGB(120, 90, 220)
+avatarStroke.Thickness = 4
+avatarStroke.Parent = avatarImage
+
+local avatarGlow = Instance.new("ImageLabel")
+avatarGlow.Name = "AvatarGlow"
+avatarGlow.Size = UDim2.new(1, 20, 1, 20)
+avatarGlow.Position = UDim2.new(0, -10, 0, -10)
+avatarGlow.BackgroundTransparency = 1
+avatarGlow.Image = "rbxassetid://4996896980"
+avatarGlow.ImageColor3 = Color3.fromRGB(100, 70, 200)
+avatarGlow.ImageTransparency = 0.7
+avatarGlow.ScaleType = Enum.ScaleType.Slice
+avatarGlow.SliceCenter = Rect.new(19, 19, 81, 81)
+avatarGlow.Parent = avatarImage
+
+local imageName = Instance.new("TextLabel")
+imageName.Name = "ImageName"
+imageName.Size = UDim2.new(1, -40, 0, 30)
+imageName.Position = UDim2.new(0, 20, 0, 270)
+imageName.BackgroundTransparency = 1
+imageName.Text = "Main"
+imageName.TextColor3 = Color3.fromRGB(220, 220, 255)
+imageName.Font = Enum.Font.GothamBold
+imageName.TextSize = 18
+imageName.TextXAlignment = Enum.TextXAlignment.Center
+imageName.Parent = leftPanel
+
+local username = Instance.new("TextLabel")
+username.Name = "Username"
+username.Size = UDim2.new(1, -40, 0, 30)
+username.Position = UDim2.new(0, 20, 0, 300)
+username.BackgroundTransparency = 1
+username.Text = ""
+username.TextColor3 = Color3.fromRGB(170, 150, 255)
+username.Font = Enum.Font.GothamMedium
+username.TextSize = 16
+username.TextXAlignment = Enum.TextXAlignment.Center
+username.Parent = leftPanel
+
+local rightPanel = Instance.new("Frame")
+rightPanel.Name = "RightPanel"
+rightPanel.Size = UDim2.new(0.6, 0, 1, 0)
+rightPanel.Position = UDim2.new(0.4, 0, 0, 0)
+rightPanel.BackgroundTransparency = 1
+rightPanel.Parent = content
+
+local scrollFrame = Instance.new("ScrollingFrame")
+scrollFrame.Name = "ScrollFrame"
+scrollFrame.Size = UDim2.new(1, -40, 0.7, -10) 
+scrollFrame.Position = UDim2.new(0, 20, 0, 20)
+scrollFrame.BackgroundTransparency = 1
+scrollFrame.BorderSizePixel = 0
+scrollFrame.ScrollBarThickness = 6
+scrollFrame.ScrollBarImageColor3 = Color3.fromRGB(100, 100, 150)
+scrollFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
+scrollFrame.Parent = rightPanel
+
+local infoText = Instance.new("TextLabel")
+infoText.Name = "InfoText"
+infoText.Size = UDim2.new(1, 0, 1, 0)
+infoText.BackgroundTransparency = 1
+infoText.Text = [[
+====脚本信息====
+-半开源脚本
+-不圈钱
+-不跑路
+-更新快
+-UI/视觉 优美
+
+====脚本作者(3)====
+-yzc | 专业: 改枪 绘制 子弹追踪等....
+-Q3E4 | 专业: 创建UI(刚学不久) 传送 自动 绘制
+-mjay | 专业: 修复脚本 混淆脚本 汉化脚本
+#-暂无联系方式-#
+
+====支持游戏====
+-被遗弃 | 混淆 | 🟢
+-暴力区 | 开源 | 🟢
+-Piggy(小猪) | 混淆 | 🟢
+-兵工厂 | 汉化开源 | 🟢
+-WW1 | 汉化开源 | 🔴
+-兄弟的誓言 | 汉化开源 |🟢
+-摔断骨头 | 汉化开源 | 🟢
+]]
+infoText.TextColor3 = Color3.fromRGB(230, 230, 255)
+infoText.Font = Enum.Font.Gotham
+infoText.TextSize = 16
+infoText.TextXAlignment = Enum.TextXAlignment.Left
+infoText.TextYAlignment = Enum.TextYAlignment.Top
+infoText.TextWrapped = true
+infoText.Parent = scrollFrame
+
+infoText:GetPropertyChangedSignal("TextBounds"):Connect(function()
+    scrollFrame.CanvasSize = UDim2.new(0, 0, 0, infoText.TextBounds.Y + 20)
+end)
+
+local buttonContainer = Instance.new("Frame")
+buttonContainer.Name = "ButtonContainer"
+buttonContainer.Size = UDim2.new(0.8, 0, 0, 50)
+buttonContainer.Position = UDim2.new(0.1, 0, 0.75, 0) 
+buttonContainer.BackgroundTransparency = 1
+buttonContainer.Parent = rightPanel
+
+local actionButton = Instance.new("TextButton")
+actionButton.Name = "ActionButton"
+actionButton.Size = UDim2.new(1, 0, 1, 0)
+actionButton.BackgroundColor3 = Color3.fromRGB(90, 60, 200)
+actionButton.Text = "我已阅读"
+actionButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+actionButton.Font = Enum.Font.GothamBold 
+actionButton.TextSize = 18 
+actionButton.Parent = buttonContainer
+
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0, 12)
+buttonCorner.Parent = actionButton
+
+local buttonStroke = Instance.new("UIStroke")
+buttonStroke.Color = Color3.fromRGB(150, 120, 255)
+buttonStroke.Thickness = 2 
+buttonStroke.Parent = actionButton
+
+local buttonGlow = Instance.new("ImageLabel")
+buttonGlow.Name = "ButtonGlow"
+buttonGlow.Size = UDim2.new(1, 15, 1, 15) 
+buttonGlow.Position = UDim2.new(0, -7.5, 0, -7.5)
+buttonGlow.BackgroundTransparency = 1
+buttonGlow.Image = "rbxassetid://4996896980"
+buttonGlow.ImageColor3 = Color3.fromRGB(120, 90, 220)
+buttonGlow.ImageTransparency = 0.8
+buttonGlow.ScaleType = Enum.ScaleType.Slice
+buttonGlow.SliceCenter = Rect.new(19, 19, 81, 81)
+buttonGlow.ZIndex = -1
+buttonGlow.Parent = actionButton
+
+actionButton.MouseEnter:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {BackgroundColor3 = Color3.fromRGB(110, 80, 230)}
+    ):Play()
+    TweenService:Create(
+        buttonGlow,
+        TweenInfo.new(0.2),
+        {ImageColor3 = Color3.fromRGB(140, 110, 250)}
+    ):Play()
+end)
+
+actionButton.MouseLeave:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {BackgroundColor3 = Color3.fromRGB(90, 60, 200)}
+    ):Play()
+    TweenService:Create(
+        buttonGlow,
+        TweenInfo.new(0.2),
+        {ImageColor3 = Color3.fromRGB(120, 90, 220)}
+    ):Play()
+end)
+
+actionButton.MouseButton1Down:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {BackgroundColor3 = Color3.fromRGB(70, 40, 180)}
+    ):Play()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {Position = UDim2.new(0, 0, 0, 2)}
+    ):Play()
+end)
+
+actionButton.MouseButton1Up:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {BackgroundColor3 = Color3.fromRGB(110, 80, 230)}
+    ):Play()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {Position = UDim2.new(0, 0, 0, 0)}
+    ):Play()
+end)
+
+actionButton.Activated:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {Size = UDim2.new(0.95, 0, 0.95, 0)}
+    ):Play()
+    wait(0.2)
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {Size = UDim2.new(1, 0, 1, 0)}
+    ):Play()
+    
+    wait(0.5)
+    TweenService:Create(
+        mainFrame,
+        TweenInfo.new(0.5),
+        {Size = UDim2.new(0, 0, 0, 0)}
+    ):Play()
+    
+    wait(0.5)
+    screenGui:Destroy()
+    
+    local L = loadstring or load
+local Lib = "https://raw.github.com/OAO-Kamu/UI-Library-Interface/main/SP%20LibraryMain.lua"
+local splib = L(game:HttpGet(Lib))()
+
+local Window = splib:MakeWindow({
+ Name = "CHANGED HUB  | Loader",
+ HidePremium = false,
+ SaveConfig = true,
+ Setting = true,
+ ToggleIcon = "rbxassetid://82795327169782",
+ ConfigFolder = "CHANGED Loader",
+ CloseCallback = true
+})
+
+MainTab = Window:MakeTab({
+  IsMobile = true,
+  Name = "主游戏",
+  Icon = "rbxassetid://4483345998"
+})
+--MainTab:AddButton({  这是示例不要管
+--    Name = "Button",  这是示例不要管
+--    Desc = "What?",  这是示例不要管
+--    Callback = function()  这是示例不要管
+--        print("button pressed")  这是示例不要管
+--    end  这是示例不要管
+--})  这是示例不要管
+MainTab:AddButton({
+    Name = "🟢 | 被遗弃",
+    Desc = "CHANGED 不开源脚本: 被遗弃",
+    Callback = function()
+        local L = loadstring or load
+        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/fask.lua"
+        L(game:HttpGet(ID))()
+    end
+})
+MainTab:AddButton({
+    Name = "🟢 | 暴力区",
+    Desc = "CHANGED 开源脚本: 暴力区",
+    Callback = function()
+        local L = loadstring or load
+        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/ASII.lua"
+        L(game:HttpGet(ID))()
+    end
+})
+MainTab:AddButton({
+    Name = "🟢 | Piggy",
+    Desc = "CHANGED 不开源脚本: Piggy",
+    Callback = function()
+        local L = loadstring or load
+        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Piggy.lua"
+        L(game:HttpGet(ID))()
+    end
+})
+
+Tab = Window:MakeTab({
+  IsMobile = true,
+  Name = "汉化游戏",
+  Icon = "rbxassetid://4483345998"
+})
+Tab:AddButton({
+    Name = "🟢 | 兵工厂",
+    Desc = "CHANGED 汉化开源脚本: 兵工厂",
+    Callback = function()
+        local L = loadstring or load
+        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Arsenal.lua"
+        L(game:HttpGet(ID))()
+    end
+})
+Tab:AddButton({
+    Name = "🟢 | 摔断骨头",
+    Desc = "CHANGED 汉化开源脚本: 摔断骨头",
+    Callback = function()
+        local L = loadstring or load
+        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Broken%20Bone.lua"
+        L(game:HttpGet(ID))()
+    end
+})
+
+StateTab = Window:MakeTab({
+  IsMobile = true,
+  Name = "脚本详细状态",
+  Icon = "rbxassetid://4483345998"
+})
+StateTab:AddSection({
+  Name = "CHANGED 脚本工作状态: "
+})
+StateTab:AddSection({
+  Name = "🔴 | 已下线: 3/13"
+})
+StateTab:AddSection({
+  Name = "🟡 | 制作中: 2/13"
+})
+StateTab:AddSection({
+  Name = "🟢 | 运行中: 8/13"
+})
+StateTab:AddLabel("🟢WORK |  被遗弃")
+StateTab:AddLabel("🟢WORK |  Piggy")
+StateTab:AddLabel("🟢WORK |  Loader")
+StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
+StateTab:AddLabel("🟢WORK |  XOR Obf")
+StateTab:AddLabel("🟢WORK |  暴力区")
+StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
+StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
+StateTab:AddLabel("🟢WORK |  通用脚本 ")
+StateTab:AddLabel("🟡MAKEING |  后悔电梯")
+StateTab:AddLabel("🟡MAKEING |  The Rake")
+StateTab:AddLabel("🔴TAPEOUT |  刀刃球")
+StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss")
+StateTab:AddLabel("🔴TAPEOUT |  MM2")
+
+end)
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    mainFrame.Position = UDim2.new(
+        startPos.X.Scale, 
+        startPos.X.Offset + delta.X, 
+        startPos.Y.Scale, 
+        startPos.Y.Offset + delta.Y
+    )
+end
+
+header.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+header.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+
+local floating = true
+spawn(function()
+    while floating and mainFrame do
+        local tween = TweenService:Create(
+            mainFrame,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Position = UDim2.new(0.5, 0, 0.48, 0)}
+        )
+        tween:Play()
+        tween.Completed:Wait()
+        
+        if not mainFrame then break end
+        
+        tween = TweenService:Create(
+            mainFrame,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Position = UDim2.new(0.5, 0, 0.52, 0)}
+        )
+        tween:Play()
+        tween.Completed:Wait()
+    end
+end)
+
+local rainbowStroke = Instance.new("UIStroke")
+rainbowStroke.Name = "RainbowBorder"
+rainbowStroke.Thickness = 4
+rainbowStroke.Transparency = 0.3
+rainbowStroke.Parent = mainFrame
+
+spawn(function()
+    local colors = {
+        Color3.fromRGB(255, 0, 0),    
+        Color3.fromRGB(255, 165, 0),  
+        Color3.fromRGB(255, 255, 0), 
+        Color3.fromRGB(0, 255, 0),  
+        Color3.fromRGB(0, 0, 255),  
+        Color3.fromRGB(75, 0, 130),  
+        Color3.fromRGB(238, 130, 238) 
+    }
+    
+    local currentIndex = 1
+    while rainbowStroke and rainbowStroke.Parent do
+        rainbowStroke.Color = colors[currentIndex]
+        currentIndex = currentIndex % #colors + 1
+        wait(0.1) 
+    end
+end)
