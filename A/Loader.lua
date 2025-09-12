@@ -3,7 +3,7 @@ Bro快点制作skid脚本!!! 我不混淆了 也换行了😘
 Bro 不要偷别人的脚本🤫
 ]]
 --[[
-赶紧去做做skid脚本🤣🤣🤣🤣🤣🤣
+赶紧去做skid脚本🤣🤣🤣🤣🤣🤣
 小废物天天想着看别人的源码  窝囊废😂
 自己手也没有脑也没有  也懒得学做脚本
 ]]
@@ -353,11 +353,11 @@ actionButton.Activated:Connect(function()
     })
     
     MainTab:AddButton({
-        Name = "🟢 | 被遗弃",
+        Name = "🟢 | 被遗弃[UPDATE]",
         Desc = "CHANGED 不开源脚本: 被遗弃",
         Callback = function()
             local L = loadstring or load
-            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/fask.lua"
+            local ID = "https://raw.github.com/OAO-Kamu/Forsaken/main/obfuscated_obft.lua.txt"
             L(game:HttpGet(ID))()
         end
     })
