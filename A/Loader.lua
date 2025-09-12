@@ -1,5 +1,194 @@
---[[Bro 快点制作 skid 脚本 我不混淆了😘]]
-local Players = game:GetService("Players") local TweenService = game:GetService("TweenService") local UserInputService = game:GetService("UserInputService") local HttpService = game:GetService("HttpService") local player = Players.LocalPlayer local playerGui = player:WaitForChild("PlayerGui") local screenGui = Instance.new("ScreenGui") screenGui.Name = "EnhancedProfileCard" screenGui.ResetOnSpawn = false screenGui.Parent = playerGui local mainFrame = Instance.new("Frame") mainFrame.Name = "MainFrame" mainFrame.Size = UDim2.new(0.86, 0, 0.9, 0) mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0) mainFrame.AnchorPoint = Vector2.new(0.5, 0.5) mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 45) mainFrame.BackgroundTransparency = 0.15 mainFrame.BorderSizePixel = 0 mainFrame.Parent = screenGui local corner = Instance.new("UICorner") corner.CornerRadius = UDim.new(0, 16) corner.Parent = mainFrame local backgroundImage = Instance.new("ImageLabel") backgroundImage.Name = "Background" backgroundImage.Size = UDim2.new(1, 0, 1, 0) backgroundImage.Image = "rbxassetid://7071423635" backgroundImage.ImageTransparency = 0.6 backgroundImage.ScaleType = Enum.ScaleType.Crop backgroundImage.BackgroundTransparency = 1 backgroundImage.Parent = mainFrame local backgroundImage = Instance.new("ImageLabel") backgroundImage.Name = "Background" backgroundImage.Size = UDim2.new(1, 0, 1, 0) backgroundImage.Image = "rbxassetid://7071423635" backgroundImage.ImageTransparency = 0.6 backgroundImage.ScaleType = Enum.ScaleType.Crop backgroundImage.BackgroundTransparency = 1 backgroundImage.Parent = mainFrame local header = Instance.new("Frame") header.Name = "Header" header.Size = UDim2.new(1, 0, 0, 50) header.BackgroundColor3 = Color3.fromRGB(40, 40, 60) header.BackgroundTransparency = 0.2 header.BorderSizePixel = 0 header.Parent = mainFrame local headerCorner = Instance.new("UICorner") headerCorner.CornerRadius = UDim.new(0, 16) headerCorner.Parent = header local headerDecoration = Instance.new("Frame") headerDecoration.Name = "HeaderDecoration" headerDecoration.Size = UDim2.new(1, 0, 0, 4) headerDecoration.Position = UDim2.new(0, 0, 1, -4) headerDecoration.BackgroundColor3 = Color3.fromRGB(100, 70, 200) headerDecoration.BorderSizePixel = 0 headerDecoration.Parent = header local headerCorner2 = Instance.new("UICorner") headerCorner2.CornerRadius = UDim.new(0, 4) headerCorner2.Parent = headerDecoration local title = Instance.new("TextLabel") title.Name = "Title" title.Size = UDim2.new(1, 0, 1, 0) title.BackgroundTransparency = 1 title.Text = "CHANGED HUB | 公告" title.TextColor3 = Color3.fromRGB(255, 255, 255) title.Font = Enum.Font.GothamBlack title.TextSize = 22 title.Parent = header local content = Instance.new("Frame") content.Name = "Content" content.Size = UDim2.new(1, 0, 1, -50) content.Position = UDim2.new(0, 0, 0, 50) content.BackgroundTransparency = 1 content.Parent = mainFrame local leftPanel = Instance.new("Frame") leftPanel.Name = "LeftPanel" leftPanel.Size = UDim2.new(0.4, 0, 1, 0) leftPanel.BackgroundTransparency = 1 leftPanel.Parent = content local avatarContainer = Instance.new("Frame") avatarContainer.Name = "AvatarContainer" avatarContainer.Size = UDim2.new(1, -40, 0, 173) avatarContainer.Position = UDim2.new(0, 20, 0, 20) avatarContainer.BackgroundTransparency = 1 avatarContainer.Parent = leftPanel local avatarImage = Instance.new("ImageLabel") avatarImage.Name = "Avatar" avatarImage.Size = UDim2.new(1, 0, 1, 0) avatarImage.BackgroundTransparency = 1 avatarImage.Parent = avatarContainer local userId = player.UserId local avatarUrl = "https://www.roblox.com/headshot-thumbnail/image?userId=".. userId .."&width=420&height=420&format=png" avatarImage.Image = avatarUrl local avatarCorner = Instance.new("UICorner") avatarCorner.CornerRadius = UDim.new(0, 16) avatarCorner.Parent = avatarImage local avatarStroke = Instance.new("UIStroke") avatarStroke.Color = Color3.fromRGB(120, 90, 220) avatarStroke.Thickness = 4 avatarStroke.Parent = avatarImage local avatarGlow = Instance.new("ImageLabel") avatarGlow.Name = "AvatarGlow" avatarGlow.Size = UDim2.new(1, 20, 1, 20) avatarGlow.Position = UDim2.new(0, -10, 0, -10) avatarGlow.BackgroundTransparency = 1 avatarGlow.Image = "rbxassetid://4996896980" avatarGlow.ImageColor3 = Color3.fromRGB(100, 70, 200) avatarGlow.ImageTransparency = 0.7 avatarGlow.ScaleType = Enum.ScaleType.Slice avatarGlow.SliceCenter = Rect.new(19, 19, 81, 81) avatarGlow.Parent = avatarImage local imageName = Instance.new("TextLabel") imageName.Name = "ImageName" imageName.Size = UDim2.new(1, -40, 0, 30) imageName.Position = UDim2.new(0, 20, 0, 270) imageName.BackgroundTransparency = 1 imageName.Text = "Main" imageName.TextColor3 = Color3.fromRGB(220, 220, 255) imageName.Font = Enum.Font.GothamBold imageName.TextSize = 18 imageName.TextXAlignment = Enum.TextXAlignment.Center imageName.Parent = leftPanel local username = Instance.new("TextLabel") username.Name = "Username" username.Size = UDim2.new(1, -40, 0, 30) username.Position = UDim2.new(0, 20, 0, 300) username.BackgroundTransparency = 1 username.Text = "" username.TextColor3 = Color3.fromRGB(170, 150, 255) username.Font = Enum.Font.GothamMedium username.TextSize = 16 username.TextXAlignment = Enum.TextXAlignment.Center username.Parent = leftPanel local rightPanel = Instance.new("Frame") rightPanel.Name = "RightPanel" rightPanel.Size = UDim2.new(0.6, 0, 1, 0) rightPanel.Position = UDim2.new(0.4, 0, 0, 0) rightPanel.BackgroundTransparency = 1 rightPanel.Parent = content local scrollFrame = Instance.new("ScrollingFrame") scrollFrame.Name = "ScrollFrame" scrollFrame.Size = UDim2.new(1, -40, 0.7, -10) scrollFrame.Position = UDim2.new(0, 20, 0, 20) scrollFrame.BackgroundTransparency = 1 scrollFrame.BorderSizePixel = 0 scrollFrame.ScrollBarThickness = 6 scrollFrame.ScrollBarImageColor3 = Color3.fromRGB(100, 100, 150) scrollFrame.CanvasSize = UDim2.new(0, 0, 2, 0) scrollFrame.Parent = rightPanel local infoText = Instance.new("TextLabel") infoText.Name = "InfoText" infoText.Size = UDim2.new(1, 0, 1, 0) infoText.BackgroundTransparency = 1 infoText.Text = [[
+--[[
+Bro快点制作skid脚本!!! 我不混淆了 也换行了😘
+Bro 不要偷别人的脚本🤫
+]]
+--[[
+赶紧去做做skid脚本🤣🤣🤣🤣🤣🤣
+小废物天天想着看别人的源码  窝囊废😂
+自己手也没有脑也没有  也懒得学做脚本
+]]
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "EnhancedProfileCard"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0.86, 0, 0.9, 0)
+mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.BackgroundColor3 = Color3.fromRGB(255, 182, 193)
+mainFrame.BackgroundTransparency = 0.15
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 16)
+corner.Parent = mainFrame
+
+local backgroundImage = Instance.new("ImageLabel")
+backgroundImage.Name = "Background"
+backgroundImage.Size = UDim2.new(1, 0, 1, 0)
+backgroundImage.Image = "rbxassetid://7071423635"
+backgroundImage.ImageTransparency = 0.6
+backgroundImage.ScaleType = Enum.ScaleType.Crop
+backgroundImage.BackgroundTransparency = 1
+backgroundImage.Parent = mainFrame
+
+local header = Instance.new("Frame")
+header.Name = "Header"
+header.Size = UDim2.new(1, 0, 0, 50)
+header.BackgroundColor3 = Color3.fromRGB(255, 182, 193)
+header.BackgroundTransparency = 0.2
+header.BorderSizePixel = 0
+header.Parent = mainFrame
+
+local headerCorner = Instance.new("UICorner")
+headerCorner.CornerRadius = UDim.new(0, 16)
+headerCorner.Parent = header
+
+local headerDecoration = Instance.new("Frame")
+headerDecoration.Name = "HeaderDecoration"
+headerDecoration.Size = UDim2.new(1, 0, 0, 4)
+headerDecoration.Position = UDim2.new(0, 0, 1, -4)
+headerDecoration.BackgroundColor3 = Color3.fromRGB(255, 182, 193)
+headerDecoration.BorderSizePixel = 0
+headerDecoration.Parent = header
+
+local headerCorner2 = Instance.new("UICorner")
+headerCorner2.CornerRadius = UDim.new(0, 4)
+headerCorner2.Parent = headerDecoration
+
+local title = Instance.new("TextLabel")
+title.Name = "Title"
+title.Size = UDim2.new(1, 0, 1, 0)
+title.BackgroundTransparency = 1
+title.Text = "CHANGED HUB | 公告"
+title.TextColor3 = Color3.fromRGB(255, 240, 245)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 22
+title.Parent = header
+
+local titleStroke = Instance.new("UIStroke")
+titleStroke.Color = Color3.fromRGB(255, 182, 193)
+titleStroke.Thickness = 2
+titleStroke.Parent = title
+
+local content = Instance.new("Frame")
+content.Name = "Content"
+content.Size = UDim2.new(1, 0, 1, -50)
+content.Position = UDim2.new(0, 0, 0, 50)
+content.BackgroundTransparency = 1
+content.Parent = mainFrame
+
+local leftPanel = Instance.new("Frame")
+leftPanel.Name = "LeftPanel"
+leftPanel.Size = UDim2.new(0.4, 0, 1, 0)
+leftPanel.BackgroundTransparency = 1
+leftPanel.Parent = content
+
+local avatarContainer = Instance.new("Frame")
+avatarContainer.Name = "AvatarContainer"
+avatarContainer.Size = UDim2.new(1, -40, 0, 173)
+avatarContainer.Position = UDim2.new(0, 20, 0, 20)
+avatarContainer.BackgroundTransparency = 1
+avatarContainer.Parent = leftPanel
+
+local avatarImage = Instance.new("ImageLabel")
+avatarImage.Name = "Avatar"
+avatarImage.Size = UDim2.new(1, 0, 1, 0)
+avatarImage.BackgroundTransparency = 1
+avatarImage.Parent = avatarContainer
+
+local userId = player.UserId
+local avatarUrl = "https://www.roblox.com/headshot-thumbnail/image?userId=".. userId .."&width=420&height=420&format=png"
+avatarImage.Image = avatarUrl
+
+local avatarCorner = Instance.new("UICorner")
+avatarCorner.CornerRadius = UDim.new(0, 16)
+avatarCorner.Parent = avatarImage
+
+local avatarStroke = Instance.new("UIStroke")
+avatarStroke.Color = Color3.fromRGB(255, 182, 193)
+avatarStroke.Thickness = 4
+avatarStroke.Parent = avatarImage
+
+local avatarGlow = Instance.new("ImageLabel")
+avatarGlow.Name = "AvatarGlow"
+avatarGlow.Size = UDim2.new(1, 20, 1, 20)
+avatarGlow.Position = UDim2.new(0, -10, 0, -10)
+avatarGlow.BackgroundTransparency = 1
+avatarGlow.Image = "rbxassetid://4996896980"
+avatarGlow.ImageColor3 = Color3.fromRGB(255, 182, 193)
+avatarGlow.ImageTransparency = 0.7
+avatarGlow.ScaleType = Enum.ScaleType.Slice
+avatarGlow.SliceCenter = Rect.new(19, 19, 81, 81)
+avatarGlow.Parent = avatarImage
+
+local imageName = Instance.new("TextLabel")
+imageName.Name = "ImageName"
+imageName.Size = UDim2.new(1, -40, 0, 30)
+imageName.Position = UDim2.new(0, 20, 0, 270)
+imageName.BackgroundTransparency = 1
+imageName.Text = "Main"
+imageName.TextColor3 = Color3.fromRGB(255, 240, 245)
+imageName.Font = Enum.Font.GothamBold
+imageName.TextSize = 18
+imageName.TextXAlignment = Enum.TextXAlignment.Center
+imageName.Parent = leftPanel
+
+local imageNameStroke = Instance.new("UIStroke")
+imageNameStroke.Color = Color3.fromRGB(255, 182, 193)
+imageNameStroke.Thickness = 1
+imageNameStroke.Parent = imageName
+
+local username = Instance.new("TextLabel")
+username.Name = "Username"
+username.Size = UDim2.new(1, -40, 0, 30)
+username.Position = UDim2.new(0, 20, 0, 300)
+username.BackgroundTransparency = 1
+username.Text = ""
+username.TextColor3 = Color3.fromRGB(255, 240, 245) 
+username.Font = Enum.Font.GothamMedium
+username.TextSize = 16
+username.TextXAlignment = Enum.TextXAlignment.Center
+username.Parent = leftPanel
+
+local usernameStroke = Instance.new("UIStroke")
+usernameStroke.Color = Color3.fromRGB(255, 182, 193) 
+usernameStroke.Thickness = 1
+usernameStroke.Parent = username
+
+local rightPanel = Instance.new("Frame")
+rightPanel.Name = "RightPanel"
+rightPanel.Size = UDim2.new(0.6, 0, 1, 0)
+rightPanel.Position = UDim2.new(0.4, 0, 0, 0)
+rightPanel.BackgroundTransparency = 1
+rightPanel.Parent = content
+
+local scrollFrame = Instance.new("ScrollingFrame")
+scrollFrame.Name = "ScrollFrame"
+scrollFrame.Size = UDim2.new(1, -40, 0.7, -10)
+scrollFrame.Position = UDim2.new(0, 20, 0, 20)
+scrollFrame.BackgroundTransparency = 1
+scrollFrame.BorderSizePixel = 0
+scrollFrame.ScrollBarThickness = 6
+scrollFrame.ScrollBarImageColor3 = Color3.fromRGB(255, 182, 193)
+scrollFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
+scrollFrame.Parent = rightPanel
+
+local infoText = Instance.new("TextLabel")
+infoText.Name = "InfoText"
+infoText.Size = UDim2.new(1, 0, 1, 0)
+infoText.BackgroundTransparency = 1
+infoText.Text = [[
 ====脚本信息====
 -半开源脚本
 -不圈钱
@@ -20,4 +209,341 @@ local Players = game:GetService("Players") local TweenService = game:GetService(
 -兵工厂 | 汉化开源 | 🟢
 -WW1 | 汉化开源 | 🔴
 -兄弟的誓言 | 汉化开源 |🟢
--摔断骨头 | 汉化开源 | 🟢]]infoText.TextColor3 = Color3.fromRGB(230, 230, 255) infoText.Font = Enum.Font.Gotham infoText.TextSize = 16 infoText.TextXAlignment = Enum.TextXAlignment.Left infoText.TextYAlignment = Enum.TextYAlignment.Top infoText.TextWrapped = true infoText.Parent = scrollFrame infoText:GetPropertyChangedSignal("TextBounds"):Connect(function()    scrollFrame.CanvasSize = UDim2.new(0, 0, 0, infoText.TextBounds.Y + 20)end) local buttonContainer = Instance.new("Frame") buttonContainer.Name = "ButtonContainer" buttonContainer.Size = UDim2.new(0.8, 0, 0, 50) buttonContainer.Position = UDim2.new(0.1, 0, 0.75, 0)  buttonContainer.BackgroundTransparency = 1 buttonContainer.Parent = rightPanel  local actionButton = Instance.new("TextButton") actionButton.Name = "ActionButton" actionButton.Size = UDim2.new(1, 0, 1, 0) actionButton.BackgroundColor3 = Color3.fromRGB(90, 60, 200) actionButton.Text = "我已阅读" actionButton.TextColor3 = Color3.fromRGB(255, 255, 255) actionButton.Font = Enum.Font.GothamBold  actionButton.TextSize = 18  actionButton.Parent = buttonContainer  local buttonCorner = Instance.new("UICorner") buttonCorner.CornerRadius = UDim.new(0, 12) buttonCorner.Parent = actionButton local buttonStroke = Instance.new("UIStroke") buttonStroke.Color = Color3.fromRGB(150, 120, 255) buttonStroke.Thickness = 2  buttonStroke.Parent = actionButton local buttonGlow = Instance.new("ImageLabel") buttonGlow.Name = "ButtonGlow" buttonGlow.Size = UDim2.new(1, 15, 1, 15)  buttonGlow.Position = UDim2.new(0, -7.5, 0, -7.5) buttonGlow.BackgroundTransparency = 1 buttonGlow.Image = "rbxassetid://4996896980" buttonGlow.ImageColor3 = Color3.fromRGB(120, 90, 220) buttonGlow.ImageTransparency = 0.8 buttonGlow.ScaleType = Enum.ScaleType.Slice buttonGlow.SliceCenter = Rect.new(19, 19, 81, 81) buttonGlow.ZIndex = -1 buttonGlow.Parent = actionButton actionButton.MouseEnter:Connect(function()    TweenService:Create(        actionButton,        TweenInfo.new(0.2),        {BackgroundColor3 = Color3.fromRGB(110, 80, 230)}    ):Play()    TweenService:Create(        buttonGlow,        TweenInfo.new(0.2),        {ImageColor3 = Color3.fromRGB(140, 110, 250)}    ):Play()end)actionButton.MouseLeave:Connect(function()    TweenService:Create(        actionButton,        TweenInfo.new(0.2),        {BackgroundColor3 = Color3.fromRGB(90, 60, 200)}    ):Play()    TweenService:Create(        buttonGlow,        TweenInfo.new(0.2),        {ImageColor3 = Color3.fromRGB(120, 90, 220)}    ):Play()end)actionButton.MouseButton1Down:Connect(function()    TweenService:Create(        actionButton,        TweenInfo.new(0.1),        {BackgroundColor3 = Color3.fromRGB(70, 40, 180)}    ):Play()    TweenService:Create(        actionButton,        TweenInfo.new(0.1),        {Position = UDim2.new(0, 0, 0, 2)}    ):Play()end)actionButton.MouseButton1Up:Connect(function()    TweenService:Create(        actionButton,        TweenInfo.new(0.1),        {BackgroundColor3 = Color3.fromRGB(110, 80, 230)}    ):Play()    TweenService:Create(        actionButton,        TweenInfo.new(0.1),        {Position = UDim2.new(0, 0, 0, 0)}    ):Play()end)actionButton.Activated:Connect(function()    TweenService:Create(        actionButton,        TweenInfo.new(0.2),        {Size = UDim2.new(0.95, 0, 0.95, 0)}    ):Play()    wait(0.2)    TweenService:Create(        actionButton,        TweenInfo.new(0.2),        {Size = UDim2.new(1, 0, 1, 0)}    ):Play()        wait(0.5)    TweenService:Create(        mainFrame,        TweenInfo.new(0.5),        {Size = UDim2.new(0, 0, 0, 0)}    ):Play()        wait(0.5)    screenGui:Destroy()local L = loadstring or loadlocal Lib = "https://raw.github.com/OAO-Kamu/UI-Library-Interface/main/SP%20LibraryMain.lua"local splib = L(game:HttpGet(Lib))()local Window = splib:MakeWindow({ Name = "CHANGED HUB  | Loader", HidePremium = false, SaveConfig = true, Setting = true, ToggleIcon = "rbxassetid://82795327169782", ConfigFolder = "CHANGED Loader", CloseCallback = true})MainTab = Window:MakeTab({  IsMobile = true,  Name = "主游戏",  Icon = "rbxassetid://4483345998"})MainTab:AddButton({    Name = "🟢 | 被遗弃",    Desc = "CHANGED 不开源脚本: 被遗弃",    Callback = function()        local L = loadstring or load        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/fask.lua"        L(game:HttpGet(ID))()    end})MainTab:AddButton({    Name = "🟢 | 暴力区",    Desc = "CHANGED 开源脚本: 暴力区",    Callback = function()        local L = loadstring or load        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/ASII.lua"        L(game:HttpGet(ID))()    end})MainTab:AddButton({    Name = "🟢 | Piggy",    Desc = "CHANGED 不开源脚本: Piggy",    Callback = function()        local L = loadstring or load        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Piggy.lua"        L(game:HttpGet(ID))()    end})Tab = Window:MakeTab({  IsMobile = true,  Name = "汉化游戏",  Icon = "rbxassetid://4483345998"})Tab:AddButton({    Name = "🟢 | 兵工厂",    Desc = "CHANGED 汉化开源脚本: 兵工厂",    Callback = function()        local L = loadstring or load        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Arsenal.lua"        L(game:HttpGet(ID))()    end})Tab:AddButton({    Name = "🟢 | 摔断骨头",    Desc = "CHANGED 汉化开源脚本: 摔断骨头",    Callback = function()        local L = loadstring or load        local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Broken%20Bone.lua"        L(game:HttpGet(ID))()    end})StateTab = Window:MakeTab({  IsMobile = true,  Name = "脚本详细状态",  Icon = "rbxassetid://4483345998"})StateTab:AddSection({  Name = "CHANGED 脚本工作状态: "})StateTab:AddSection({  Name = "🔴 | 已下线: 3/13"})StateTab:AddSection({  Name = "🟡 | 制作中: 2/13"})StateTab:AddSection({  Name = "🟢 | 运行中: 8/13"})StateTab:AddLabel("🟢WORK |  被遗弃")StateTab:AddLabel("🟢WORK |  Piggy")StateTab:AddLabel("🟢WORK |  Loader")StateTab:AddLabel("🟢WORK |  帝固根深 WW1")StateTab:AddLabel("🟢WORK |  XOR Obf")StateTab:AddLabel("🟢WORK |  暴力区")StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")StateTab:AddLabel("🟢WORK |  通用脚本 ")StateTab:AddLabel("🟡MAKEING |  后悔电梯")StateTab:AddLabel("🟡MAKEING |  The Rake") StateTab:AddLabel("🔴TAPEOUT |  刀刃球") StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss") StateTab:AddLabel("🔴TAPEOUT |  MM2") end) local dragging local dragInput local dragStart local startPos local function update(input)    local delta = input.Position - dragStart    mainFrame.Position = UDim2.new(        startPos.X.Scale,         startPos.X.Offset + delta.X,         startPos.Y.Scale,         startPos.Y.Offset + delta.Y    ) end header.InputBegan:Connect(function(input)    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then        dragging = true        dragStart = input.Position        startPos = mainFrame.Position                input.Changed:Connect(function()            if input.UserInputState == Enum.UserInputState.End then                dragging = false            end        end)    end end) header.InputChanged:Connect(function(input)    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then        dragInput = input    end end)  UserInputService.InputChanged:Connect(function(input)    if input == dragInput and dragging then        update(input)    end end) local floating = true spawn(function()    while floating and mainFrame do        local tween = TweenService:Create(            mainFrame,            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),            {Position = UDim2.new(0.5, 0, 0.48, 0)}        )        tween:Play()        tween.Completed:Wait()                --[[ if not mainFrame then break end ]]                tween = TweenService:Create(            mainFrame,            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),            {Position = UDim2.new(0.5, 0, 0.52, 0)}        )        tween:Play()        tween.Completed:Wait()     end end) local rainbowStroke = Instance.new("UIStroke") rainbowStroke.Name = "RainbowBorder" rainbowStroke.Thickness = 4 rainbowStroke.Transparency = 0.3 rainbowStroke.Parent = mainFrame  spawn(function()    local colors = {        Color3.fromRGB(255, 0, 0),        Color3.fromRGB(255, 165, 0),        Color3.fromRGB(255, 255, 0),     }        local tweenService = game:GetService("TweenService")    local transitionTime = 0.5      local currentIndex = 1    local nextIndex        while rainbowStroke and rainbowStroke.Parent do        nextIndex = (currentIndex % #colors) + 1                local colorTween = tweenService:Create(            rainbowStroke,            TweenInfo.new(                transitionTime,                Enum.EasingStyle.Linear,                Enum.EasingDirection.Out            ),            {Color = colors[nextIndex]}        )                colorTween:Play()        colorTween.Completed:Wait()                currentIndex = nextIndex    end end)
+-摔断骨头 | 汉化开源 | 🟢]]
+infoText.TextColor3 = Color3.fromRGB(255, 240, 245) 
+infoText.Font = Enum.Font.Gotham
+infoText.TextSize = 16
+infoText.TextXAlignment = Enum.TextXAlignment.Left
+infoText.TextYAlignment = Enum.TextYAlignment.Top
+infoText.TextWrapped = true
+infoText.Parent = scrollFrame
+
+local infoTextStroke = Instance.new("UIStroke")
+infoTextStroke.Color = Color3.fromRGB(255, 182, 193) 
+infoTextStroke.Thickness = 1
+infoTextStroke.Parent = infoText
+
+infoText:GetPropertyChangedSignal("TextBounds"):Connect(function()
+    scrollFrame.CanvasSize = UDim2.new(0, 0, 0, infoText.TextBounds.Y + 20)
+end)
+
+local buttonContainer = Instance.new("Frame")
+buttonContainer.Name = "ButtonContainer"
+buttonContainer.Size = UDim2.new(0.8, 0, 0, 50)
+buttonContainer.Position = UDim2.new(0.1, 0, 0.75, 0) 
+buttonContainer.BackgroundTransparency = 1
+buttonContainer.Parent = rightPanel 
+
+local actionButton = Instance.new("TextButton")
+actionButton.Name = "ActionButton"
+actionButton.Size = UDim2.new(1, 0, 1, 0)
+actionButton.BackgroundColor3 = Color3.fromRGB(255, 182, 193)
+actionButton.Text = "我已阅读"
+actionButton.TextColor3 = Color3.fromRGB(255, 240, 245) 
+actionButton.Font = Enum.Font.GothamBold 
+actionButton.TextSize = 18 
+actionButton.Parent = buttonContainer 
+
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0, 12)
+buttonCorner.Parent = actionButton
+
+local buttonStroke = Instance.new("UIStroke")
+buttonStroke.Color = Color3.fromRGB(255, 182, 193)
+buttonStroke.Thickness = 2 
+buttonStroke.Parent = actionButton
+
+local buttonGlow = Instance.new("ImageLabel")
+buttonGlow.Name = "ButtonGlow"
+buttonGlow.Size = UDim2.new(1, 15, 1, 15) 
+buttonGlow.Position = UDim2.new(0, -7.5, 0, -7.5)
+buttonGlow.BackgroundTransparency = 1
+buttonGlow.Image = "rbxassetid://4996896980"
+buttonGlow.ImageColor3 = Color3.fromRGB(255, 182, 193)
+buttonGlow.ImageTransparency = 0.8
+buttonGlow.ScaleType = Enum.ScaleType.Slice
+buttonGlow.SliceCenter = Rect.new(19, 19, 81, 81)
+buttonGlow.ZIndex = -1
+buttonGlow.Parent = actionButton
+
+actionButton.MouseEnter:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {BackgroundColor3 = Color3.fromRGB(255, 200, 210)}
+    ):Play()
+    TweenService:Create(
+        buttonGlow,
+        TweenInfo.new(0.2),
+        {ImageColor3 = Color3.fromRGB(255, 200, 210)}
+    ):Play()
+end)
+
+actionButton.MouseLeave:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {BackgroundColor3 = Color3.fromRGB(255, 182, 193)}
+    ):Play()
+    TweenService:Create(
+        buttonGlow,
+        TweenInfo.new(0.2),
+        {ImageColor3 = Color3.fromRGB(255, 182, 193)} 
+    ):Play()
+end)
+
+actionButton.MouseButton1Down:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {BackgroundColor3 = Color3.fromRGB(255, 220, 230)}
+    ):Play()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {Position = UDim2.new(0, 0, 0, 2)}
+    ):Play()
+end)
+
+actionButton.MouseButton1Up:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {BackgroundColor3 = Color3.fromRGB(255, 220, 230)}
+    ):Play()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.1),
+        {Position = UDim2.new(0, 0, 0, 0)}
+    ):Play()
+end)
+
+actionButton.Activated:Connect(function()
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {Size = UDim2.new(0.95, 0, 0.95, 0)}
+    ):Play()
+    wait(0.2)
+    TweenService:Create(
+        actionButton,
+        TweenInfo.new(0.2),
+        {Size = UDim2.new(1, 0, 1, 0)}
+    ):Play()
+    
+    wait(0.5)
+    TweenService:Create(
+        mainFrame,
+        TweenInfo.new(0.5),
+        {Size = UDim2.new(0, 0, 0, 0)}
+    ):Play()
+    
+    wait(0.5)
+    screenGui:Destroy()
+    
+    local L = loadstring or load
+    local Lib = "https://raw.github.com/OAO-Kamu/UI-Library-Interface/main/SP%20LibraryMain.lua"
+    local splib = L(game:HttpGet(Lib))()
+    local Window = splib:MakeWindow({ Name = "CHANGED HUB  | Loader", HidePremium = false, SaveConfig = true, Setting = true, ToggleIcon = "rbxassetid://82795327169782", ConfigFolder = "CHANGED Loader", CloseCallback = true})
+    
+    MainTab = Window:MakeTab({
+        IsMobile = true,
+        Name = "主游戏",
+        Icon = "rbxassetid://4483345998"
+    })
+    
+    MainTab:AddButton({
+        Name = "🟢 | 被遗弃",
+        Desc = "CHANGED 不开源脚本: 被遗弃",
+        Callback = function()
+            local L = loadstring or load
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/fask.lua"
+            L(game:HttpGet(ID))()
+        end
+    })
+    
+    MainTab:AddButton({
+        Name = "🟢 | 暴力区",
+        Desc = "CHANGED 开源脚本: 暴力区",
+        Callback = function()
+            local L = loadstring or load
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/ASII.lua"
+            L(game:HttpGet(ID))()
+        end
+    })
+    
+    MainTab:AddButton({
+        Name = "🟢 | Piggy",
+        Desc = "CHANGED 不开源脚本: Piggy",
+        Callback = function()
+            local L = loadstring or load
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Piggy.lua"
+            L(game:HttpGet(ID))()
+        end
+    })
+    
+    Tab = Window:MakeTab({
+        IsMobile = true,
+        Name = "汉化游戏",
+        Icon = "rbxassetid://4483345998"
+    })
+    
+    Tab:AddButton({
+        Name = "🟢 | 兵工厂",
+        Desc = "CHANGED 汉化开源脚本: 兵工厂",
+        Callback = function()
+            local L = loadstring or load
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Arsenal.lua"
+            L(game:HttpGet(ID))()
+        end
+    })
+    
+    Tab:AddButton({
+        Name = "🟢 | 摔断骨头",
+        Desc = "CHANGED 汉化开源脚本: 摔断骨头",
+        Callback = function()
+            local L = loadstring or load
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/A/Broken%20Bone.lua"
+            L(game:HttpGet(ID))()
+        end
+    })
+    
+    StateTab = Window:MakeTab({
+        IsMobile = true,
+        Name = "脚本详细状态",
+        Icon = "rbxassetid://4483345998"
+    })
+    
+    StateTab:AddSection({
+        Name = "CHANGED 脚本工作状态: "
+    })
+    
+    StateTab:AddSection({
+        Name = "🔴 | 已下线: 3/13"
+    })
+    
+    StateTab:AddSection({
+        Name = "🟡 | 制作中: 2/13"
+    })
+    
+    StateTab:AddSection({
+        Name = "🟢 | 运行中: 8/13"
+    })
+    
+    StateTab:AddLabel("🟢WORK |  被遗弃")
+    StateTab:AddLabel("🟢WORK |  Piggy")
+    StateTab:AddLabel("🟢WORK |  Loader")
+    StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
+    StateTab:AddLabel("🟢WORK |  XOR Obf")
+    StateTab:AddLabel("🟢WORK |  暴力区")
+    StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
+    StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
+    StateTab:AddLabel("🟢WORK |  通用脚本 ")
+    StateTab:AddLabel("🟡MAKEING |  后悔电梯")
+    StateTab:AddLabel("🟡MAKEING |  The Rake") 
+    StateTab:AddLabel("🔴TAPEOUT |  刀刃球") 
+    StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss") 
+    StateTab:AddLabel("🔴TAPEOUT |  MM2") 
+end)
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    mainFrame.Position = UDim2.new(
+        startPos.X.Scale, 
+        startPos.X.Offset + delta.X, 
+        startPos.Y.Scale, 
+        startPos.Y.Offset + delta.Y
+    )
+end
+
+header.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+header.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+
+local floating = true
+spawn(function()
+    while floating and mainFrame do
+        local tween = TweenService:Create(
+            mainFrame,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Position = UDim2.new(0.5, 0, 0.48, 0)}
+        )
+        tween:Play()
+        tween.Completed:Wait()
+        
+        if not mainFrame then break end
+        
+        tween = TweenService:Create(
+            mainFrame,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Position = UDim2.new(0.5, 0, 0.52, 0)}
+        )
+        tween:Play()
+        tween.Completed:Wait()
+    end
+end)
+
+local rainbowStroke = Instance.new("UIStroke")
+rainbowStroke.Name = "RainbowBorder"
+rainbowStroke.Thickness = 4
+rainbowStroke.Transparency = 0.3
+rainbowStroke.Parent = mainFrame
+
+spawn(function()
+    local colors = {
+        Color3.fromRGB(255, 182, 193),
+        Color3.fromRGB(255, 210, 220),
+        Color3.fromRGB(255, 230, 240)
+    }
+    
+    local tweenService = game:GetService("TweenService")
+    local transitionTime = 1
+    local currentIndex = 1
+    local nextIndex
+    
+    while rainbowStroke and rainbowStroke.Parent do
+        nextIndex = (currentIndex % #colors) + 1
+        
+        local colorTween = tweenService:Create(
+            rainbowStroke,
+            TweenInfo.new(
+                transitionTime,
+                Enum.EasingStyle.Linear,
+                Enum.EasingDirection.Out
+            ),
+            {Color = colors[nextIndex]}
+        )
+        
+        colorTween:Play()
+        colorTween.Completed:Wait()
+        
+        currentIndex = nextIndex
+    end
+end)
