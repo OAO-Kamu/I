@@ -357,7 +357,7 @@ actionButton.Activated:Connect(function()
         Desc = "CHANGED 不开源脚本: 被遗弃",
         Callback = function()
             local L = loadstring or load
-            local ID = "https://raw.github.com/OAO-Kamu/Forsaken/main/obfuscated_obft.lua.txt"
+            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/B/obfuscated_obft.lua.txt"
             L(game:HttpGet(ID))()
         end
     })
@@ -407,7 +407,16 @@ actionButton.Activated:Connect(function()
             L(game:HttpGet(ID))()
         end
     })
-    
+    Tab:AddButton({
+    Name = "🟢 | CW (战斗勇士)[NEW]",
+    Desc = "What?",
+    Callback = function()
+       local L = loadstring or load 
+       local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/B/obfuscated_cw.lua.txt"
+       L(game:HttpGet(ID))()
+    end
+})
+
     StateTab = Window:MakeTab({
         IsMobile = true,
         Name = "脚本详细状态",
@@ -434,6 +443,7 @@ actionButton.Activated:Connect(function()
     StateTab:AddLabel("🟢WORK |  Piggy")
     StateTab:AddLabel("🟢WORK |  Loader")
     StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
+    StateTab:AddLabel("🟢WORK |  CW")
     StateTab:AddLabel("🟢WORK |  XOR Obf")
     StateTab:AddLabel("🟢WORK |  暴力区")
     StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
