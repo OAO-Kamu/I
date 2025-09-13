@@ -207,9 +207,16 @@ infoText.Text = [[
 -暴力区 | 开源 | 🟢
 -Piggy(小猪) | 混淆 | 🟢
 -兵工厂 | 汉化开源 | 🟢
--WW1 | 汉化开源 | 🔴
--兄弟的誓言 | 汉化开源 |🟢
--摔断骨头 | 汉化开源 | 🟢]]
+-WW1 | 汉化开源 | 🟢
+-兄弟的誓言 | 汉化开源 | 🟢
+-摔断骨头 | 汉化开源 | 🟢
+-奇怪枪游戏 | 汉化开源 | 🟢
+-CW(战斗勇士) | 汉化不开源 | 🟢
+
+
+
+-mjay到此一游😝~
+]]
 infoText.TextColor3 = Color3.fromRGB(255, 240, 245) 
 infoText.Font = Enum.Font.Gotham
 infoText.TextSize = 16
@@ -344,7 +351,15 @@ actionButton.Activated:Connect(function()
     local L = loadstring or load
     local Lib = "https://raw.github.com/OAO-Kamu/UI-Library-Interface/main/SP%20LibraryMain.lua"
     local splib = L(game:HttpGet(Lib))()
-    local Window = splib:MakeWindow({ Name = "CHANGED HUB  | Loader", HidePremium = false, SaveConfig = true, Setting = true, ToggleIcon = "rbxassetid://82795327169782", ConfigFolder = "CHANGED Loader", CloseCallback = true})
+    local Window = splib:MakeWindow({ 
+        Name = "CHANGED HUB  | Loader",
+        HidePremium = false,
+        SaveConfig = true,
+        Setting = true,
+        ToggleIcon = "rbxassetid://82795327169782",
+        ConfigFolder = "CHANGED Loader",
+        CloseCallback = true
+    })
     
     MainTab = Window:MakeTab({
         IsMobile = true,
@@ -408,52 +423,94 @@ actionButton.Activated:Connect(function()
         end
     })
     Tab:AddButton({
-    Name = "🟢 | CW (战斗勇士)[NEW]",
-    Desc = "What?",
-    Callback = function()
-       local L = loadstring or load 
-       local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/B/obfuscated_cw.lua.txt"
-       L(game:HttpGet(ID))()
-    end
-})
-
-    StateTab = Window:MakeTab({
-        IsMobile = true,
-        Name = "脚本详细状态",
-        Icon = "rbxassetid://4483345998"
+        Name = "🟢 | CW (战斗勇士)[NEW]",
+        Desc = "What?",
+        Callback = function()
+            local L = loadstring or load 
+            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/B/obfuscated_cw.lua.txt"
+            L(game:HttpGet(ID))()
+        end
     })
-    
-    StateTab:AddSection({
-        Name = "CHANGED 脚本工作状态: "
+    Tab:AddButton({
+        Name = "🟢 | 兄弟的誓言[NEW]",
+        Desc = "What?",
+        Callback = function()
+            local L = loadstring or load 
+            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/A/VOM.lua"
+            L(game:HttpGet(ID))()
+        end
     })
-    
-    StateTab:AddSection({
-        Name = "🔴 | 已下线: 3/13"
+    Tab:AddButton({
+        Name = "🟢 | 奇怪枪游戏[NEW]",
+        Desc = "What?",
+        Callback = function()
+            local L = loadstring or load 
+            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/A/%E5%A5%87%E6%80%AA%E6%9E%AA%20Game%20%E6%B1%89%E5%8C%96.lua"
+            L(game:HttpGet(ID))()
+        end
     })
-    
-    StateTab:AddSection({
-        Name = "🟡 | 制作中: 2/13"
+    Tab:AddButton({
+        Name = "🟢 | WW1[NEW]",
+        Desc = "What?",
+        Callback = function()
+            local L = loadstring or load 
+            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/A/WW1.Lua"
+            L(game:HttpGet(ID))()
+        end
     })
+    --[[
+        StateTab = Window:MakeTab({
+            IsMobile = true,
+            Name = "脚本详细状态",
+            Icon = "rbxassetid://4483345998"
+        })
     
-    StateTab:AddSection({
-        Name = "🟢 | 运行中: 8/13"
-    })
+        StateTab:AddSection({
+            Name = "CHANGED 脚本工作状态: "
+        })
     
-    StateTab:AddLabel("🟢WORK |  被遗弃")
-    StateTab:AddLabel("🟢WORK |  Piggy")
-    StateTab:AddLabel("🟢WORK |  Loader")
-    StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
-    StateTab:AddLabel("🟢WORK |  CW")
-    StateTab:AddLabel("🟢WORK |  XOR Obf")
-    StateTab:AddLabel("🟢WORK |  暴力区")
-    StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
-    StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
-    StateTab:AddLabel("🟢WORK |  通用脚本 ")
-    StateTab:AddLabel("🟡MAKEING |  后悔电梯")
-    StateTab:AddLabel("🟡MAKEING |  The Rake") 
-    StateTab:AddLabel("🔴TAPEOUT |  刀刃球") 
-    StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss") 
-    StateTab:AddLabel("🔴TAPEOUT |  MM2") 
+        StateTab:AddSection({
+            Name = "🔴 | 已下线: 3/13"
+        })
+    
+        StateTab:AddSection({
+            Name = "🟡 | 制作中: 2/13"
+        })
+    
+        StateTab:AddSection({
+            Name = "🟢 | 运行中: 8/13"
+        })
+    
+        StateTab:AddLabel("🟢WORK |  被遗弃")
+        StateTab:AddLabel("🟢WORK |  Piggy")
+        StateTab:AddLabel("🟢WORK |  Loader")
+        StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
+        StateTab:AddLabel("🟢WORK |  CW")
+        StateTab:AddLabel("🟢WORK |  XOR Obf")
+        StateTab:AddLabel("🟢WORK |  暴力区")
+        StateTab:AddLabel("🟢WORK |  兵工厂(汉化)")
+        StateTab:AddLabel("🟢WORK |  GL-Link <==GL-X HUB的API")
+        StateTab:AddLabel("🟢WORK |  通用脚本 ")
+        StateTab:AddLabel("🟡MAKEING |  后悔电梯")
+        StateTab:AddLabel("🟡MAKEING |  The Rake") 
+        StateTab:AddLabel("🔴TAPEOUT |  刀刃球") 
+        StateTab:AddLabel("🔴TAPEOUT |  Into The Abyss") 
+        StateTab:AddLabel("🔴TAPEOUT |  MM2") 
+    ]]--[[
+            local Players = game:GetService("Players")
+            local player = Players.LocalPlayer
+            local TextChatService = game:GetService("TextChatService")
+            if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+                local channel = TextChatService:FindFirstChild("TextChannels").RBXGeneral
+                    if channel then
+                        channel:SendAsync("/Console")
+                    end
+            else
+                game:GetService("Chat"):RegisterChatCallback(Enum.ChatCallbackType.OnCreatingChatWindow, function(chatWindow)
+                    chatWindow:RegisterProcessMessageFunction("HelloCommand", onChatted)
+                end)
+            end
+    ]]
 end)
 
 local dragging
@@ -557,3 +614,4 @@ spawn(function()
         currentIndex = nextIndex
     end
 end)
+--Hello OwO
