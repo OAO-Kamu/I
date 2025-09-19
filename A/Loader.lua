@@ -361,13 +361,13 @@ actionButton.Activated:Connect(function()
         Name = "主游戏",
         Icon = "rbxassetid://4483345998"
     })
-    --月亮 v3 有 dunpmer😭77obf 下线了🙂MoonPlxV1.2 下线了😨普罗米修斯不安全😭让我们使用 25ms 社区的加密❤️
+    
     MainTab:AddButton({
-        Name = "🔴 | 被遗弃[UPDATE]",
+        Name = "🟢 | 被遗弃[UPDATE]",
         Desc = "CHANGED 不开源脚本: 被遗弃",
         Callback = function()
             local L = loadstring or load
-            local ID = "https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/B/obfuscated_obft.lua.txt"
+            local ID = "https://raw.github.com/OAO-Kamu/I/main/B/Moonix_Obfuscated-Forsaken.lua"
             L(game:HttpGet(ID))()
         end
     })
@@ -476,7 +476,7 @@ actionButton.Activated:Connect(function()
             Name = "🟢 | 运行中: 8/13"
         })
     
-        StateTab:AddLabel("🔵LOADING |  被遗弃")
+        StateTab:AddLabel("🟢WORK |  被遗弃")
         StateTab:AddLabel("🟢WORK |  Piggy")
         StateTab:AddLabel("🟢WORK |  Loader")
         StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
