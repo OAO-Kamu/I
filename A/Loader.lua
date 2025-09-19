@@ -1,11 +1,6 @@
 --[[
-Bro快点制作skid脚本!!! 我不混淆了 也换行了😘
-Bro 不要偷别人的脚本🤫
-]]
---[[
-赶紧去做skid脚本🤣🤣🤣🤣🤣🤣
-小废物天天想着看别人的源码  窝囊废😂
-自己手也没有脑也没有  也懒得学做脚本
+nice skid❤️
+很好的 skid❤️
 ]]
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -203,7 +198,7 @@ infoText.Text = [[
 #-暂无联系方式-#
 
 ====支持游戏====
--被遗弃 | 混淆 | 🟢
+-被遗弃 | 混淆 | 🔴
 -暴力区 | 开源 | 🟢
 -Piggy(小猪) | 混淆 | 🟢
 -兵工厂 | 汉化开源 | 🟢
@@ -366,9 +361,9 @@ actionButton.Activated:Connect(function()
         Name = "主游戏",
         Icon = "rbxassetid://4483345998"
     })
-    
+    --月亮 v3 有 dunpmer😭77obf 下线了🙂MoonPlxV1.2 下线了😨普罗米修斯不安全😭让我们使用 25ms 社区的加密❤️
     MainTab:AddButton({
-        Name = "🟢 | 被遗弃[UPDATE]",
+        Name = "🔴 | 被遗弃[UPDATE]",
         Desc = "CHANGED 不开源脚本: 被遗弃",
         Callback = function()
             local L = loadstring or load
@@ -481,7 +476,7 @@ actionButton.Activated:Connect(function()
             Name = "🟢 | 运行中: 8/13"
         })
     
-        StateTab:AddLabel("🟢WORK |  被遗弃")
+        StateTab:AddLabel("🔵LOADING |  被遗弃")
         StateTab:AddLabel("🟢WORK |  Piggy")
         StateTab:AddLabel("🟢WORK |  Loader")
         StateTab:AddLabel("🟢WORK |  帝固根深 WW1")
