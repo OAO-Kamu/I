@@ -1,0 +1,3 @@
+local Flags = "https://gitlab.com/qe4-dev-team/Main/-/raw/main/ZS-II.luau"
+local Key = "Meow-Ware-ZX59KTCM7UKBMCV725X92X"
+return Int
