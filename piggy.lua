@@ -1,3 +1,4 @@
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/OAO-Kamu/I/refs/heads/main/Loader.LuaU"))()
 local startTime = os.clock() 
 do
 	local n = nil
@@ -71,7 +72,7 @@ local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/neb
 
 local Window = Starlight:CreateWindow({
     Name = "SLDK-Piggy 1RH",
-    Subtitle = "v2.6.22 - 小猪[Piggy] | 开源库: https://Github.com/OAO-Kamu/I/",
+    Subtitle = "v2.6.22 - 小猪[Piggy] | 开源库: https://Github.com/OAO-Kamu/I/ | 快捷键: K",
     Icon = 1234567890,
 
     LoadingSettings = {
